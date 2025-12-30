@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# Antigravity React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, modern React application built with TypeScript and Vite. Antigravity features a high-impact landing page and integrated internal pages, all styled with a dark, sleek design system.
 
-Currently, two official plugins are available:
+## 🚀 Vision
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antigravity is designed for developers who demand both power and aesthetics. It provides a solid foundation for building sophisticated web applications with Zero-runtime overhead and a state-of-the-art UI/UX.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Premium Design**: Modern dark theme with animated gradients and glassmorphism components.
+- **TypeScript Core**: Fully typed development experience for reliability and scalability.
+- **Client-Side Routing**: Seamless navigation using `react-router-dom`.
+- **Pre-built Pages**:
+  - **Home**: High-conversion landing page with hero section and feature highlights.
+  - **Features**: Detailed breakdown of system capabilities.
+  - **About**: Visionary content about the project.
+  - **Contact**: Functional UI with contact form and information cards.
+- **Performance Optimized**: Built on Vite with a custom Vanilla CSS design system.
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: [React 19](https://reactjs.org/)
+- **Build Tool**: [Vite 7](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Routing**: [React Router 7](https://reactrouter.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Styling**: Vanilla CSS with custom design tokens.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MannyV/antigravity-react.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd antigravity-react
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 🏗 Project Structure
+
+```text
+src/
+├── components/     # Reusable UI components
+├── pages/          # Individual page components (Home, About, etc.)
+├── assets/         # Static assets
+├── App.tsx         # Main application and routing setup
+├── index.css       # Global styles and design tokens
+└── main.tsx        # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📜 License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Created by [MannyV (Emmanuel Vayleux)](https://github.com/mannyv).
