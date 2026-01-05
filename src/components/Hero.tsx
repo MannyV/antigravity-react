@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
                     marginBottom: '1.5rem',
                     letterSpacing: '-0.02em'
                 }}>
-                    The Future of Web <br /> Development is Here
+                    The Future of Web <br /> Development is Now
                 </h1>
                 <p style={{
                     fontSize: 'clamp(1rem, 2vw, 1.25rem)',
