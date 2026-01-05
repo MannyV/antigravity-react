@@ -1,0 +1,31 @@
+name: Daily Project Heartbeat
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs at 00:00 UTC every day
+  workflow_dispatch: # Allows manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update Heartbeat File
+        run: |
+          echo "# Last Daily Heartbeat" > HEARTBEAT.md
+          echo "This project was automatically verified on: $(date)" >> HEARTBEAT.md
+          echo "" >> HEARTBEAT.md
+          echo "Status: ✅ Active and Operational" >> HEARTBEAT.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add HEARTBEAT.md
+          git commit -m "chore: daily heartbeat update [skip ci]" || echo "No changes to commit"
+          git push
